@@ -4,13 +4,16 @@
   <title>Coding Quiz Challenge</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!--stylesheets-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
   <!--top header-->
   <header>
-    <p class="scores">View High Scores</p>
+    <a href="#" id="viewHighScores"><p class="scores">View High Scores</p></a>
     <p class="time" id="timer">Time Left: <span id="timer-count">0</span></p>
     <p class="time" id="timesUp" style="display: none;">Times Up!</p>
   </header>
@@ -28,10 +31,12 @@
     <!--quiz section-->
     <section id="questionScreen" style="display:none;">
       <h2 id="questionTitle" class="pl-5 ml-2 pt-5 justify-content-center font-weight-bold"></h2>
-      <button id="btn0" class="answer-btn"></button></p>
-      <button id="btn1" class="answer-btn"></button></p>
-      <button id="btn2" class="answer-btn"></button></p>
-      <button id="btn3" class="answer-btn"></button></p>
+      <div class="container">
+        <button id="btn0" class="answer-btn"></button><br/>
+        <button id="btn1" class="answer-btn"></button><br/>
+        <button id="btn2" class="answer-btn"></button><br/>
+        <button id="btn3" class="answer-btn"></button>
+      </div>
       <hr id="lineBreak" style="display: none">
       <p id="answerCheck" style="display: none;"></p>
     </section>
@@ -39,7 +44,7 @@
     <!--summary screen-->
     <section id="summaryScreen" style="display:none;">
       <h2>All done!</h2>
-      <p>Your final score is <span id="finalScore"></span> !</p>
+      <p>Your final score is <span id="finalScore"></span>!</p>
       <form>
         <p>Enter your initials: <input id="initialInput" type="text"></p>
         <button type="submit" id="submitInitials">Submit</button>
@@ -49,7 +54,9 @@
     <!--scores screen-->
     <section id="scoreScreen" style="display:none;">
       <h2>High Scores</h2>
-      <ul id="highScoresList"></ul>
+      <ol id="highScoresList"></ol>
+      <button type="submit" id="goBackButton">Go Back</button>
+      <button type="submit" id="clearHighScoreButton">Clear High Scores</button>
     </section>
   </main>
 

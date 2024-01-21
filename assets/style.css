@@ -11,6 +11,14 @@ body {
   justify-content: flex-start;
 }
 
+a {
+  color: #b244e3;
+}
+
+a:hover {
+  color: #551A8B;
+}
+
 header {
   padding: 20px;
   text-align: center;
@@ -24,6 +32,7 @@ main {
 
 section {
   text-align: center;
+  max-width: 1232px;
 }
 
 button {
@@ -31,15 +40,17 @@ button {
   border-radius: 8px;
   color: #fff;
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 1em;
+  padding: 5px 10px;
   letter-spacing: 0.21px;
-  padding: 10px 25px;
   text-align: center;
+  align-items: center;
   transition-duration: 0.15s;
   transition-property: background-color;
   transition-timing-function: linear;
   margin-top: 0.6em;
   flex: 0 auto;
+  width: auto;
 }
 
 button:hover {
@@ -58,4 +69,24 @@ button:hover {
 
 h1 {
   font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#questionScreen .container, #highScoresList {
+  text-align: left;
+}
+
+#answerCheck {
+  text-align: left;
+  font-style: italic;
+  color: grey;
+}
+
+#highScoresList {
+  background: #d9d3e9;
 }
