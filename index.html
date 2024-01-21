@@ -7,19 +7,54 @@
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
+
+  <!--top header-->
   <header>
-    <section>
-      <p class="scores">View High Scores</p>
-      <p class="timer">Time Left: <span class="timer-count">0</span></p>
-    </section>
-    <h1>Coding Quiz Challenge</h1>
+    <p class="scores">View High Scores</p>
+    <p class="time" id="timer">Time Left: <span id="timer-count">0</span></p>
+    <p class="time" id="timesUp" style="display: none;">Times Up!</p>
   </header>
+
+  <!--main content-->
   <main>
-    <section>
-      <p>Want to see how much you know about Javascript? Take this online quiz and test your knowledge!</p>
+
+    <!--start screen-->
+    <section id="startScreen">
+      <h1>Coding Quiz Challenge</h1>
+      <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
       <button class="start-btn">Start Quiz</button>
     </section>
+
+    <!--quiz section-->
+    <section id="questionScreen" style="display:none;">
+      <h2 id="questionTitle" class="pl-5 ml-2 pt-5 justify-content-center font-weight-bold"></h2>
+      <button id="btn0" class="answer-btn"></button></p>
+      <button id="btn1" class="answer-btn"></button></p>
+      <button id="btn2" class="answer-btn"></button></p>
+      <button id="btn3" class="answer-btn"></button></p>
+      <hr id="lineBreak" style="display: none">
+      <p id="answerCheck" style="display: none;"></p>
+    </section>
+
+    <!--summary screen-->
+    <section id="summaryScreen" style="display:none;">
+      <h2>All done!</h2>
+      <p>Your final score is <span id="finalScore"></span> !</p>
+      <form>
+        <p>Enter your initials: <input id="initialInput" type="text"></p>
+        <button type="submit" id="submitInitials">Submit</button>
+      </form>
+    </section>
+
+    <!--scores screen-->
+    <section id="scoreScreen" style="display:none;">
+      <h2>High Scores</h2>
+      <ul id="highScoresList"></ul>
+    </section>
   </main>
+
+  <!--script files-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="/assets/script.js"></script>
 </body>
 </html>
